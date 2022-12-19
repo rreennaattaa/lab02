@@ -15,6 +15,9 @@ print("Погодные условия:", data['weather'][0]['description'])
 print("Температура:", data['main']['temp'])
 print("Минимальная температура:", data['main']['temp_min'])
 print("Максимальная температура", data['main']['temp_max'])
+print(f"Скорость ветра - {data['wind']['speed']} м/c")
+print(f"Видимость {data['visibility']}м")
+print()
 
 res = requests.get("http://api.openweathermap.org/data/2.5/forecast",
 params={'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
