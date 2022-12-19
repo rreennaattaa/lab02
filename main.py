@@ -28,6 +28,8 @@ for i in data['list']:
 		'{0:+3.0f}'.format(i['main']['temp']),
 		"> \r\nПогодные условия <",
 		i['weather'][0]['description'],
-		">"
+		">",
+		f"\r\nСкорость ветра - {i['wind']['speed']} м/c",
+		f"\r\nВидимость {i['visibility']}м"
 	)
 	print("____________________________")
